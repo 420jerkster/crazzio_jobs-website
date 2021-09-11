@@ -1,17 +1,12 @@
-import React from 'react';
+import React, {Component} from "react"
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./public/build/tailwind.css"
+/*import App from './Crazzio Join/Crazzio_Join';*/
+/*import App from './Crazzio Login Join/crazzio_login';*/
+/*import App from './User Profiles/User_profile';*/
+import App from './Crazzio_Jobs/Job_App';
+/*import App from './Crazzio_blogs/Blog_App';*/
+/*import App from './Crazzio_Search/Search_App';*/ 
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App active_user_index = "0" />, document.getElementById("root"))

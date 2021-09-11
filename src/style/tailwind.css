@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .crazzio_hover{
+        @apply duration-200 ease-out hover:text-gray-600
+    }
+
+    .crazzio_o_hover{
+        @apply duration-200 ease-out hover:text-red-800
+    }
+
+    .crazzio_com_hover{
+        @apply duration-200 ease-out hover:text-white
+    }
+
+    .login_div{
+        @apply inline-block p-2 duration-300 ease-in-out transform rounded-lg cursor-pointer max-w-max hover:bg-gray-800 hover:shadow-xl hover:-translate-y-1
+    }
+
+    .login_text{
+        @apply text-sm font-bold text-white uppercase xl:text-xl md:text-lg
+    }
+
+    .navbar_div{
+        @apply inline-block p-2 mx-auto duration-300 ease-in-out transform cursor-pointer hover:-translate-y-1 group max-w-max mr-3
+    }
+
+    .navbar_text{
+        @apply text-lg text-white group-hover:text-green-600 md:text-xl xl:text-2xl 2xl:text-3xl
+    }
+}
+
+@layer utilities {
+    @variants responsive {
+      /* Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+  
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    }
+  }
