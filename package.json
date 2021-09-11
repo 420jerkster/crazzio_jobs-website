@@ -1,5 +1,6 @@
 {
   "name": "crazzio_jobs",
+  "homepage": "https://github.com/DeaDKilleR2210/crazzio_jobs-website.git",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +13,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "npm run watch:css && react-scripts start",
     "build": "npm run watch:css && react-scripts build",
     "test": "react-scripts test",
@@ -38,6 +41,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
+    "gh-pages": "^3.2.3",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.2.15"
