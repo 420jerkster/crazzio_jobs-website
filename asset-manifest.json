@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/crazzio_jobs-website/static/css/main.8d2efbcd.chunk.css",
-    "main.js": "/crazzio_jobs-website/static/js/main.47d8e1f7.chunk.js",
-    "main.js.map": "/crazzio_jobs-website/static/js/main.47d8e1f7.chunk.js.map",
+    "main.js": "/crazzio_jobs-website/static/js/main.50e25984.chunk.js",
+    "main.js.map": "/crazzio_jobs-website/static/js/main.50e25984.chunk.js.map",
     "runtime-main.js": "/crazzio_jobs-website/static/js/runtime-main.b7dbd1ed.js",
     "runtime-main.js.map": "/crazzio_jobs-website/static/js/runtime-main.b7dbd1ed.js.map",
     "static/js/2.5310d111.chunk.js": "/crazzio_jobs-website/static/js/2.5310d111.chunk.js",
@@ -22,6 +22,7 @@
     "static/media/experience (1).7d590776.png": "/crazzio_jobs-website/static/media/experience (1).7d590776.png",
     "static/media/filter(black).ad5cb1c3.png": "/crazzio_jobs-website/static/media/filter(black).ad5cb1c3.png",
     "static/media/ghost.62207e9f.png": "/crazzio_jobs-website/static/media/ghost.62207e9f.png",
+    "static/media/graduation.debaec83.png": "/crazzio_jobs-website/static/media/graduation.debaec83.png",
     "static/media/language.b75a1046.png": "/crazzio_jobs-website/static/media/language.b75a1046.png",
     "static/media/like.5d9deb0a.png": "/crazzio_jobs-website/static/media/like.5d9deb0a.png",
     "static/media/more-options_black.ab175f6a.png": "/crazzio_jobs-website/static/media/more-options_black.ab175f6a.png",
@@ -40,6 +41,6 @@
     "static/js/runtime-main.b7dbd1ed.js",
     "static/js/2.5310d111.chunk.js",
     "static/css/main.8d2efbcd.chunk.css",
-    "static/js/main.47d8e1f7.chunk.js"
+    "static/js/main.50e25984.chunk.js"
   ]
 }
