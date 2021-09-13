@@ -22,7 +22,7 @@ class Client_card extends Component{
     render() {
 
         const skills = (this.props.skills).map((skill) => 
-            <p className="h-8 px-2 py-1 overflow-hidden text-center text-gray-700 bg-gray-300 max-w-max">{skill}</p>
+            <p className="h-8 py-1 overflow-hidden text-sm text-center text-gray-700 sm:text-base sm:px-2 sm:bg-gray-300 max-w-max">{skill}</p>
         )
 
         const description = (this.props.description).map((desc) => 
@@ -30,40 +30,40 @@ class Client_card extends Component{
         )
         
         return(
-            <div  className="transition-all duration-300 bg-white cursor-pointer md:py-1 md:my-1 lg:py-0 md:hover:shadow-lg">
+            <div  className="w-full transition-all duration-300 bg-white cursor-pointer md:py-1 md:my-1 lg:py-0 md:hover:shadow-lg">
                 
 
                 {/*Under md*/}
-                <div className="h-full md:hidden ">
+                <div className="w-screen h-full md:hidden ">
                     
                     {/*Profile*/}
                     <div className="flex">
                         {/*Profile Image*/}
-                        <img src={dpL} className="object-cover w-20 h-20 m-3 ml-2 rounded-full shadow-xl " />
+                        <img src={dpL} className="object-cover m-3 ml-2 rounded-full shadow-xl w-14 h-14 sm:w-20 sm:h-20 " />
                         
                         {/*Name*/}
-                        <div className="inline-block mt-5 max-w-max">
-                            <p className="text-xl font-bold text-gray-900 mt-1.5">{this.props.Fname + " " + this.props.Lname}</p>
+                        <div className="inline-block mt-2 sm:mt-5 max-w-max">
+                            <p className="sm:text-xl text-lg font-bold text-gray-900 mt-1.5">{this.props.Fname + " " + this.props.Lname}</p>
                             
                             {/*Location*/}
                             <div className="flex flex-row mx-auto -ml-1 max-w-max">
-                                <img src={location} className="w-5 h-5"  />
-                                <p className="text-gray-700">{this.props.location}- {this.props.time}</p>
+                                <img src={location} className="w-4 h-4 sm:w-5 sm:h-5"  />
+                                <p className="-mt-1 text-sm text-gray-700 sm:text-base sm:mt-0 ">{this.props.location}- {this.props.time}</p>
                             </div>
                         </div>
                     </div>
 
 
-                    <div className="flex float-right mr-5 -mt-20 space-x-6">
-                        <img src={save_black} className="w-7 h-7 mt-1.5 cursor-pointer" />
-                            <img src={share_black} className="h-7 w-7 mt-1.5 cursor-pointer" />
-                            <img src={more_black} className="h-7 w-7 mt-1.5 cursor-pointer hidden" />
+                    <div className="float-right mr-5 -mt-16 space-x-6 sm:flex sm:-mt-20 ">
+                        <img src={save_black} className="sm:w-7  w-6 h-6 sm:h-7 mt-1.5 cursor-pointer hidden" />
+                        <img src={share_black} className="sm:h-7 sm:w-7 w-6 h-6 mt-1.5 cursor-pointer hidden" />
+                        <img src={more_black} className="sm:h-7 sm:w-7 w-6 h-6 mt-1.5 cursor-pointer " />
                     </div>
 
                     {/*Profession*/}
                     <div className="mx-auto mt-2 max-w-max">
-                        <p className="text-xl font-extrabold text-center text-black xl:text-2xl">{this.props.title}</p>
-                        <p className="text-xl text-center text-gray-700">Est. Budget: Rs.{this.props.budget}</p>
+                        <p className="text-lg font-extrabold text-center text-black sm:text-xl xl:text-2xl">{this.props.title}</p>
+                        <p className="text-lg text-center text-gray-700 sm:text-xl">Est. Budget: Rs.{this.props.budget}</p>
                     </div>
 
                     {/*Qualifications*/}
@@ -72,11 +72,11 @@ class Client_card extends Component{
                             <img src={language} className="w-6 h-6 mx-auto max-w-max" />
                             <p className="font-semibold text-center text-gray-900">Languages</p>
                             <div>
-                                <p className="font-medium text-center text-gray-700">{this.props.lang}</p>
+                                <p className="font-medium text-center text-gray-700 w-28">{this.props.lang}</p>
                             </div>
                         </div>
 
-                        <div className="max-w-max">
+                        <div className="hidden max-w-max sm:block">
                             <img src={completion_time} className="w-6 h-6 mx-auto max-w-max" />
                             <p className="font-semibold text-center text-gray-900">Completion</p>
                             <div>
@@ -102,9 +102,9 @@ class Client_card extends Component{
                     </div>
 
                     {/*Skills*/}
-                    <div className="flex-row mx-auto my-5 space-x-4 sm:flex max-w-max">
+                    <div className="flex-row px-1 mx-auto my-5 overflow-hidden sm:flex max-w-max">
                         <p className="flex-shrink-0 p-1 text-lg font-semibold text-center text-gray-900 lg:text-xl">Other Specializations: </p>
-                        <div className="flex flex-row flex-shrink-0 space-x-2">
+                        <div className="flex flex-row flex-shrink-0 space-x-2 sm:space-x-2">
                             {skills} {/* Skills list up  */}
                         </div>
                     </div>

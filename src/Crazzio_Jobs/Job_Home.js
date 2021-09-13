@@ -13,7 +13,7 @@ class Home extends Component{
     render() {
         return(
             <div className="">
-                <div className="block"><Topbar /></div>
+                <div className="block w-full"><Topbar /></div>
                 
                 <div className="shadow-lg mr-44 w-full -mt-.5 flex z-30 bg-gray-900">
                     <img src={crazzio_gray} className="h-14" /> 
@@ -47,7 +47,7 @@ class Home extends Component{
                                 </div>
                                 
                                 {/*Active cad and JobCards*/}
-                                <div className="w-full mt-10 space-y-3 md:px-3 lg:mt-0">
+                                <div className="w-full mt-10 space-y-3  md:px-3 lg:mt-0">
                                     <div classname=""><CardBody /></div>
                                 </div>
                             </div>

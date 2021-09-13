@@ -16,7 +16,7 @@ class ActivecardUncolapsed extends Component{
 
         const attached_links = (UserJobClientData[0].user[0].links).map((links)=>{
             return(
-                <p className="w-56 h-8 p-1 px-2 my-3 overflow-hidden text-gray-700 bg-gray-300 rounded-full"><a target={"_blank"} href={links}>{links}</a></p>
+                <p className="h-8 p-1 my-3 overflow-hidden text-gray-700 bg-gray-300 rounded-full md:w-56 w-80"><a target={"_blank"} href={links}>{links}</a></p>
             )
         })
 
@@ -28,23 +28,25 @@ class ActivecardUncolapsed extends Component{
                     <div className="float-right mt-16 bg-white max-w-max">
                         <div className="">
                             {/*Card*/}
-                            <div className="flex flex-row ">
-                                <div className="-mt-3 w-116">
-                                    <Client_card_Active Fname = {UserJobClientData[indexChanged].user[0].Fname} Lname = {UserJobClientData[indexChanged].user[0].Lname} location = {UserJobClientData[indexChanged].user[0].location} time = {UserJobClientData[indexChanged].user[0].post_date} title = {UserJobClientData[indexChanged].user[0].title} budget = {UserJobClientData[indexChanged].user[0].budget} lang ={UserJobClientData[indexChanged].user[0].lang} completion ={UserJobClientData[indexChanged].user[0].completion} proposals_rec = {UserJobClientData[indexChanged].user[0].proposals_rec} exp = {UserJobClientData[indexChanged].user[0].exp} skills = {UserJobClientData[indexChanged].user[0].skills} description = {UserJobClientData[indexChanged].user[0].description} post_date  = {UserJobClientData[indexChanged].user[0].post_date} />
+                            <div className="flex-row md:flex ">
+                                <div className="-mt-3 xl:w-116">
+                                    <Client_card_Active Fname = {UserJobClientData[indexChanged].user[0].Fname} Lname = {UserJobClientData[indexChanged].user[0].Lname} location = {UserJobClientData[indexChanged].user[0].location} time = {UserJobClientData[indexChanged].user[0].post_date} title = {UserJobClientData[indexChanged].user[0].title} budget = {UserJobClientData[indexChanged].user[0].budget} lang ={UserJobClientData[indexChanged].user[0].lang} completion ={UserJobClientData[indexChanged].user[0].completion} proposals_rec = {UserJobClientData[indexChanged].user[0].proposals_rec} exp = {UserJobClientData[indexChanged].user[0].exp} skills = {UserJobClientData[indexChanged].user[0].skills} description = {UserJobClientData[indexChanged].user[0].description} post_date  = {UserJobClientData[indexChanged].user[0].post_date} graduation = {UserJobClientData[indexChanged].user[0].graduation} />
                                 </div>
 
                                 {/*Buttons*/}
-                                <div className="hidden px-4 py-2 space-y-6 bg-gray-100 lg:block">
-                                    <div className="bg-black rounded-full cursor-pointer bg-opacity-90 backdrop-filter hover:bg-opacity-80 backdrop-blur-md">
-                                        <p className="p-2 text-xl font-semibold text-center text-gray-300 ">Send a proposal</p>
-                                    </div>
+                                <div className="px-4 py-2 space-y-6 bg-gray-100 lg:block">
+                                    <div className="hidden space-y-6 md:block">
+                                        <div className="bg-black rounded-full cursor-pointer bg-opacity-90 backdrop-filter hover:bg-opacity-80 backdrop-blur-md">
+                                            <p className="p-2 text-xl font-semibold text-center text-gray-300 ">Send a proposal</p>
+                                        </div>
 
-                                    <div className="border-2 border-black rounded-full cursor-pointer hover:bg-gray-200">
-                                        <p className="p-2 text-xl font-semibold text-center text-black ">Save</p>
-                                    </div>
+                                        <div className="border-2 border-black rounded-full cursor-pointer hover:bg-gray-200">
+                                            <p className="p-2 text-xl font-semibold text-center text-black ">Save</p>
+                                        </div>
 
-                                    <div className="border-2 border-black rounded-full cursor-pointer hover:bg-gray-200">
-                                        <p className="p-2 text-xl font-semibold text-center text-black ">Archive</p>
+                                        <div className="border-2 border-black rounded-full cursor-pointer hover:bg-gray-200">
+                                            <p className="p-2 text-xl font-semibold text-center text-black ">Archive</p>
+                                        </div>
                                     </div>
                                     
                                     {/*Client Info */}
@@ -67,10 +69,24 @@ class ActivecardUncolapsed extends Component{
                                     </div>
 
                                     {/*Useful links*/}
-                                    <div className="py-3 mx-2 space-y-4 border-t-2 border-gray-300">
+                                    <div className="py-3 mx-2 space-y-4 overflow-hidden border-t-2 border-gray-300">
                                         <p className="text-xl font-bold text-center text-gray-800">Attached Links</p>
-                                        <div>
+                                        <div className="mx-auto max-w-max">
                                             {attached_links}
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-6 md:hidden ">
+                                        <div className="bg-black rounded-full cursor-pointer bg-opacity-90 backdrop-filter hover:bg-opacity-80 backdrop-blur-md">
+                                            <p className="p-2 text-xl font-semibold text-center text-gray-300 ">Send a proposal</p>
+                                        </div>
+
+                                        <div className="border-2 border-black rounded-full cursor-pointer hover:bg-gray-200">
+                                            <p className="p-2 text-xl font-semibold text-center text-black ">Save</p>
+                                        </div>
+
+                                        <div className="border-2 border-black rounded-full cursor-pointer hover:bg-gray-200">
+                                            <p className="p-2 text-xl font-semibold text-center text-black ">Archive</p>
                                         </div>
                                     </div>
                                 </div>
@@ -79,7 +95,7 @@ class ActivecardUncolapsed extends Component{
                         </div>
 
                         {/*Comments*/}
-                        <div className="p-6 bg-white border-t-2 border-gray-300">
+                        <div className="hidden p-6 bg-white border-t-2 border-gray-300">
                             {/*<p className="mb-6 text-5xl font-extrabold text-center text-gray-700">Comments and Reviews</p>*/}
                             <div className="mx-auto space-y-4 max-w-max">
                                 <CommentCard />

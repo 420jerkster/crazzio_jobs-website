@@ -16,6 +16,7 @@ import proposal from "../../Files/contract.png"
 import experience from "../../Files/experience (1).png"
 import language from "../../Files/language.png"
 import uploaded from "../../Files/cloud-computing.png"
+import graduation from "../../Files/graduation.png"
 
 class Client_card extends Component{
     render() {
@@ -29,31 +30,31 @@ class Client_card extends Component{
         )
         
         return(
-            <div  className="bg-white md:py-1 md:my-1 lg:my-0 lg:py-0 lg:mt-3 ">
+            <div  className="w-full bg-white md:py-1 md:my-1 lg:my-0 lg:py-0 lg:mt-3 ">
                 
 
                 {/*Under md*/}
-                <div className="h-full md:hidden ">
+                <div className="w-screen h-full md:hidden ">
                     
                     {/*Profile*/}
-                    <div className="flex">
+                    <div className="flex mt-2.5 border-b-2 border-gray-300">
                         {/*Profile Image*/}
-                        <img src={dpL} className="object-cover w-20 h-20 m-3 ml-2 rounded-full shadow-xl " />
+                        <img src={dpL} className="object-cover m-3 ml-2 rounded-full shadow-xl w-14 h-14 sm:w-20 sm:h-20 " />
                         
                         {/*Name*/}
-                        <div className="inline-block mt-5 max-w-max">
-                            <p className="text-xl font-bold text-gray-900 mt-1.5">{this.props.Fname + " " + this.props.Lname}</p>
+                        <div className="inline-block mt-2 sm:mt-5 max-w-max">
+                            <p className="sm:text-xl text-lg font-bold text-gray-900 mt-1.5">{this.props.Fname + " " + this.props.Lname}</p>
                             
                             {/*Location*/}
                             <div className="flex flex-row mx-auto -ml-1 max-w-max">
                                 <img src={location} className="w-5 h-5"  />
-                                <p className="text-gray-700">{this.props.location}- {this.props.time}</p>
+                                <p className="text-sm text-gray-700 sm:text-base">{this.props.location}- {this.props.time}</p>
                             </div>
                         </div>
                     </div>
 
 
-                    <div className="flex float-right mr-5 -mt-20 space-x-6">
+                    <div className="flex float-right mr-5 -mt-16 space-x-6 sm:-mt-20">
                         <img src={save_black} className="w-7 h-7 mt-1.5 cursor-pointer" />
                             <img src={share_black} className="h-7 w-7 mt-1.5 cursor-pointer" />
                             <img src={more_black} className="h-7 w-7 mt-1.5 cursor-pointer hidden" />
@@ -61,43 +62,58 @@ class Client_card extends Component{
 
                     {/*Profession*/}
                     <div className="mx-auto mt-2 max-w-max">
-                        <p className="text-xl font-extrabold text-center text-black xl:text-2xl">{this.props.title}</p>
-                        <p className="text-xl text-center text-gray-700">Est. Budget: Rs.{this.props.budget}</p>
+                        <p className="text-lg font-extrabold text-center text-black sm:text-xl xl:text-2xl">{this.props.title}</p>
+                        <p className="text-lg text-center text-gray-700 sm:text-xl">Est. Budget: Rs.{this.props.budget}</p>
                     </div>
 
                     {/*Qualifications*/}
-                    <div className="flex flex-wrap p-2 mx-auto mt-4 space-x-6 max-w-max">
-                        <div className="max-w-max">
-                            <img src={language} className="w-6 h-6 mx-auto max-w-max" />
-                            <p className="font-semibold text-center text-gray-900">Languages</p>
-                            <div>
-                                <p className="font-medium text-center text-gray-700">{this.props.lang}</p>
+                    <div className="p-2 mx-auto mt-6 space-y-6 sm:space-x-6 sm:space-y-0 sm:flex max-w-max">
+                        <div className="flex space-x-6 ">
+                            <div className="max-w-max">
+                                <img src={language} className="w-6 h-6 mx-auto max-w-max" />
+                                <p className="font-semibold text-center text-gray-900">Languages</p>
+                                <div>
+                                    <p className="font-medium text-center text-gray-700 w-28">{this.props.lang}</p>
+                                </div>
+                            </div>
+
+                            <div className="max-w-max">
+                                <img src={completion_time} className="w-6 h-6 mx-auto max-w-max" />
+                                <p className="font-semibold text-center text-gray-900">Completion</p>
+                                <div>
+                                    <p className="font-medium text-center text-gray-700">{this.props.completion}</p>
+                                </div>
+                            </div>
+
+                            <div className="max-w-max">
+                                <img src={proposal} className="w-6 h-6 mx-auto max-w-max" />
+                                <p className="font-semibold text-center text-gray-900">Proposals</p>
+                                <div>
+                                    <p className="font-medium text-center text-gray-700">{this.props.proposals_rec}</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="max-w-max">
-                            <img src={completion_time} className="w-6 h-6 mx-auto max-w-max" />
-                            <p className="font-semibold text-center text-gray-900">Completion</p>
-                            <div>
-                                <p className="font-medium text-center text-gray-700">{this.props.completion}</p>
+                        <div className="flex mx-auto space-x-6 max-w-max">
+                            <div className="max-w-max">
+                                <img src={experience} className="w-6 h-6 mx-auto max-w-max" />
+                                <p className="font-semibold text-center text-gray-900">Experience</p>
+                                <div>
+                                    <p className="font-medium text-center text-gray-700">{this.props.exp}</p>
+                                </div>
+                            </div>
+
+                            <div className="max-w-max">
+                                <img src={graduation} className="w-6 h-6 mx-auto max-w-max" />
+                                <p className="font-semibold text-center text-gray-900">Requirement</p>
+                                <div>
+                                    <p className="font-medium text-center text-gray-700">{this.props.graduation}</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="max-w-max">
-                            <img src={proposal} className="w-6 h-6 mx-auto max-w-max" />
-                            <p className="font-semibold text-center text-gray-900">Proposals</p>
-                            <div>
-                                <p className="font-medium text-center text-gray-700">{this.props.proposals_rec}</p>
-                            </div>
-                        </div>
-
-                        <div className="max-w-max">
-                            <img src={experience} className="w-6 h-6 mx-auto max-w-max" />
-                            <p className="font-semibold text-center text-gray-900">Experience</p>
-                            <div>
-                                <p className="font-medium text-center text-gray-700">{this.props.exp}</p>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
 
                     {/*Description */}
